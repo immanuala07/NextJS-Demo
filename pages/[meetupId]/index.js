@@ -94,7 +94,7 @@ export async function getStaticPaths() {
 
   // Creating paths for dynamic routes  
 	return {
-		fallback: false,
+		fallback: 'blocking',
 		// Creating paths for dynamic routes
 		paths: meetups.map((meetup) => ({
 			params: { meetupId: meetup._id.toString() }
